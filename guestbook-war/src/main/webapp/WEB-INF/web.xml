@@ -6,7 +6,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
     <servlet>
         <servlet-name>guestbook</servlet-name>
-        <servlet-class>com.google.appengine.demos.guestbook.GuestbookServlet</servlet-class>
+        <servlet-class>com.olivierlafleur.appengine.demos.guestbook.GuestbookServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>guestbook</servlet-name>
