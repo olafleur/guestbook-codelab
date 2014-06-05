@@ -8,6 +8,8 @@ import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
+import com.olivierlafleur.appengine.demos.guestbook.dao.Greeting;
+import com.olivierlafleur.appengine.demos.guestbook.dao.GreetingDao;
 
 import java.io.IOException;
 import java.util.Date;
@@ -31,6 +33,15 @@ public class SignGuestbookServlet extends HttpServlet {
         greeting.setProperty("user", user);
         greeting.setProperty("date", date);
         greeting.setProperty("content", content);
+
+        Greeting greeting1 = new Greeting();
+        greeting1.setContent("bonjour");
+        greeting1.setDate(new Date());
+        greeting1.setUser("olivier.lafleur@arcbees.com");
+
+        GreetingDao greetingDao = new GreetingDao();
+
+        greetingDao.put(greeting1);
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         datastore.put(greeting);

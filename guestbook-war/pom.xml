@@ -50,6 +50,12 @@
             <version>${appengine.target.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.objectify</groupId>
+            <artifactId>objectify</artifactId>
+            <version>5.0.2</version>
+        </dependency>
     </dependencies>
       
     <build>
